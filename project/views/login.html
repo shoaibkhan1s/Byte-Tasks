@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+            height: 100vh;
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            max-width: 80%;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 1.5rem; /* Increased size for visibility */
+            color: #fff;
+            background-color: #6200ea; /* Button color */
+            padding: 15px 30px; /* Adjusted padding */
+            border-radius: 8px; /* More rounded */
+            margin: 10px;
+            display: inline-block; /* Ensure proper spacing */
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Simple transitions */
+        }
+
+        a:hover {
+            background-color: #3700b3; /* Darker on hover */
+            transform: scale(1.05); /* Scale effect */
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            a {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Login Required</h1>
+    <p>To access this page, please follow Byte on GitHub or subscribe to Byte’s YouTube channel.</p>
+    <a href="/auth/github">Login with GitHub</a>
+    <a href="/auth/google">Login with Google</a>
+
+    <script>
+        gsap.from("h1", { opacity: 0, y: -50, duration: 1.5, ease: "power2.out" });
+        gsap.from("p", { opacity: 0, y: 50, duration: 1.5, delay: 0.5, ease: "power2.out" });
+        gsap.from("a", { opacity: 0, scale: 0.8, duration: 1, delay: 1, stagger: 0.3, ease: "back.out(1.7)" });
+    </script>
+</body>
+
+</html>
